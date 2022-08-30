@@ -61,8 +61,8 @@ export default defineConfig({
 		// },
 
 		footer: {
-			message: `Released under the MIT License.`,
-			copyright: 'Copyright © 2019-present Greg Stitt & All Contributors'
+			message: `Released under GNU GENERAL PUBLIC LICENSE.`,
+			copyright: 'Copyright © 2022-present Greg Stitt'
 		},
 
 		nav: [
