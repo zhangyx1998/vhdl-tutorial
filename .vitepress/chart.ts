@@ -29,14 +29,21 @@ export default function (md: MarkdownIt): void {
 					if (path.toLowerCase().endsWith('.svg')) return loadSrc(
 						envExt,
 						path,
-						src => src
+						buf => buf.toString()
 					)
-					else if (path.toLowerCase().endsWith('.pdf')) return [
-						`<iframe src="${path}#toolbar=0&navpanes=0" style="width: 100%; border: none; rule: none; min-height: 30rem;" >`,
-						'</iframe>',
-						'',
-						`> Alternative link: <a href="${path}" target="_blank">${path}</a>`,
-					].join('\n')
+					else if (path.toLowerCase().endsWith('.pdf')) return loadSrc(
+						envExt,
+						path,
+						buf => [
+							`<iframe
+							src="data:application/pdf;base64,${buf.toString('base64')}#toolbar=0&navpanes=0"
+							style="width: 100%; border: none; rule: none; min-height: 30rem;"
+						>`,
+							'</iframe>',
+							'',
+							`> Alternative link: <a href="data:application/pdf;base64,${buf.toString('base64')}" download="${path}">${path}</a>`,
+						].join('\n')
+					)
 					else return `<image src="${path}" />`
 				}
 			})

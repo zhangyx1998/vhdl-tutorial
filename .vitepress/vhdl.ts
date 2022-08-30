@@ -36,11 +36,11 @@ export default function (md: MarkdownIt): void {
 						case 'MAKE-SRC-LIST': return srcList(envExt, params.trim());
 						case 'AUTO-INDEX': {
 							const target = params.trim()
-							return loadSrc(envExt, target, autoIndex);
+							return loadSrc(envExt, target, buf => autoIndex(buf.toString()));
 						};
 						case 'EXTRACT': default: {
 							const [rule, target = '.'] = params.split(/\sfrom\s/i)
-							return loadSrc(envExt, target, src => extract(src, rule));
+							return loadSrc(envExt, target, buf => extract(buf.toString(), rule));
 						}
 					}
 				}

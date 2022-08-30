@@ -1,15 +1,15 @@
 import { resolve, dirname } from "path"
 import { existsSync, readFileSync } from "fs"
 
-export default function loadSrc (env, target: string, next: (src: string) => string): string {
+export default function loadSrc (env, target: string, next: (src: Buffer) => string): string {
 	const vhdlSrcPath = resolve(
 		dirname(env.path),
-		/\.vhdl?$/i.test(target)
+		/\.\w+$/i.test(target)
 			? target
 			: target + '.vhd'
 	)
 	if (existsSync(vhdlSrcPath)) {
-		return next(readFileSync(vhdlSrcPath).toString());
+		return next(readFileSync(vhdlSrcPath));
 	} else {
 		return [
 			`::: danger Error Resolving ${env.action || 'Inline Import'}:`,
