@@ -1,0 +1,19 @@
+{
+  "name": "vhdl-tutorial",
+  "homepage": "https://vhdl.dev/",
+  "keywords": [
+    "digital-design",
+    "vhdl"
+  ],
+  "scripts": {
+    "dev": "vitepress dev .",
+    "build": "vitepress build .",
+    "serve": "vitepress serve ."
+  },
+  "dependencies": {
+    "@types/node": "^18.7.13",
+    "markdown-it": "^13.0.1",
+    "vitepress": "^1.0.0-alpha.12",
+    "vue": "^3.2.37"
+  }
+}
