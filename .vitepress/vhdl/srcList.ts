@@ -1,4 +1,4 @@
-import { readdirSync } from "fs"
+import { readdirSync, readFileSync } from "fs"
 import { dirname, resolve } from "path"
 
 const style = Object.entries({
@@ -17,11 +17,17 @@ export default function srcList(env, dir) {
 		return [
 			'::: details Get source code for this page',
 			'<div style="display: flex; flex-direction: row;">',
-			...list.map(f => `
-				<a href="${resolve('/', dirname(env.relativePath), f)}" target="_blank" style="text-decoration: none !important;">
-				<code style="${style}">${f}</code>
-				</a>
-			`.trim()),
+			...list
+				.map(f => [f, readFileSync(resolve('/', dirname(env.path), f)).toString()])
+				.map(([name, data]) => `
+					<a
+						href="data:text/plain;charset=utf-8,${encodeURIComponent(data)}"
+						style="text-decoration: none !important;"
+						download="${name}"
+					>
+						<code style="${style}">${name}</code>
+					</a>
+				`.trim()),
 			'</div>',
 			'<div style="font-size: 0.8em; font-weight: bold; margin-top: 1em;">',
 			'If your browser displays the code as plain text,',
