@@ -1,0 +1,4 @@
+[submodule ".vitepress/dist"]
+	path = .vitepress/dist
+	url = git@github.com:zhangyx1998/vhdl-tutorial.git
+	branch = deploy
