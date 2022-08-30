@@ -8,17 +8,17 @@ const data = [
 			{
 				name: "University of Florida",
 				url: "https://ufl.edu/",
-				img: "/brands/ufl.png",
+				img: "/vhdl-tutorial/brands/ufl.png",
 			},
 			{
 				name: "University of Florida",
 				url: "https://ufl.edu/",
-				img: "/brands/ufl.png",
+				img: "/vhdl-tutorial/brands/ufl.png",
 			},
 			{
 				name: "University of Florida",
 				url: "https://ufl.edu/",
-				img: "/brands/ufl.png",
+				img: "/vhdl-tutorial/brands/ufl.png",
 			},
 		],
 	},

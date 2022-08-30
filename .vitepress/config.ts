@@ -15,7 +15,7 @@ export default defineConfig({
 	description: 'Quickly get started with VHDL language',
 	base: '/vhdl-tutorial/',
 	head: [
-		['link', { rel: 'icon', type: 'image/png', href: '/icon.png' }],
+		['link', { rel: 'icon', type: 'image/png', href: '/vhdl-tutorial/icon.png' }],
 		['meta', { property: 'og:type', content: 'website' }],
 		['meta', { property: 'og:title', content: ogTitle }],
 		['meta', { property: 'og:image', content: ogImage }],
