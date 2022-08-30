@@ -13,7 +13,7 @@ const ogUrl = 'https://vitejs.dev'
 export default defineConfig({
 	title: `VHDL Tutorial`,
 	description: 'Quickly get started with VHDL language',
-
+	base: '/vhdl-tutorial/',
 	head: [
 		['link', { rel: 'icon', type: 'image/png', href: '/icon.png' }],
 		['meta', { property: 'og:type', content: 'website' }],
