@@ -71,23 +71,23 @@ export default defineConfig({
 				items: [
 					{
 						text: 'Combinational Logic',
-						link: '/combinational/readme'
+						link: '/combinational/README'
 					},
 					{
 						text: 'Structural Architectures',
-						link: '/structural/readme'
+						link: '/structural/README'
 					},
 					{
 						text: 'Sequential Logic',
-						link: '/sequential/readme'
+						link: '/sequential/README'
 					}
 				]
 			},
 			{
 				text: 'Advanced',
 				items: [
-					{ text: 'Finite-State Machines', link: '/fsm/readme' },
-					{ text: 'Finite-State Machines + Datapaths', link: '/fsmd/readme' },
+					{ text: 'Finite-State Machines', link: '/fsm/README' },
+					{ text: 'Finite-State Machines + Datapaths', link: '/fsmd/README' },
 				]
 			},
 			{

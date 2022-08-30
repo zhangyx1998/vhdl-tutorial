@@ -1,5 +1,5 @@
 export default [
-	{ text: 'Introduction', link: 'readme' },
+	{ text: 'Introduction', link: 'README' },
 	{ text: 'Moore', link: 'moore/' },
 	{ text: 'mealy', link: 'mealy/' },
 ]

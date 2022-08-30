@@ -20,10 +20,10 @@ One other issue to realize is that most `VHDL` code is written for the 1993 stan
 
 ## Suggested Study Order
 
-1. [Combinational Logic](./combinational/readme)
-1. [Structural Architectures](./structural/readme)
-1. [Sequential Logic](./sequential/readme)
-1. [Finite-State Machines](./fsm/readme)
-1. [Finite-State Machines + Datapaths](./fsmd/readme)
+1. [Combinational Logic](./combinational/README)
+1. [Structural Architectures](./structural/README)
+1. [Sequential Logic](./sequential/README)
+1. [Finite-State Machines](./fsm/README)
+1. [Finite-State Machines + Datapaths](./fsmd/README)
 1. [Misc (TBD)]()
 1. [Testbenches (TBD)]()

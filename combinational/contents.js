@@ -1,5 +1,5 @@
 export default [
-	{ text: 'Introduction', link: 'readme' },
+	{ text: 'Introduction', link: 'README' },
 	{ text: '2:1 mux', link: 'mux_2x1/' },
 	{ text: '4-input Priority Encoder', link: 'priority_encoder_4in/' },
 	{ text: 'Generic Priority Encoder', link: 'priority_encoder/' },

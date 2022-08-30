@@ -1,5 +1,5 @@
 export default [
-	{ text: 'Introduction', link: 'readme' },
+	{ text: 'Introduction', link: 'README' },
 	{ text: 'Register', link: 'reg/' },
 	{ text: 'Behavioral Code Syn. Examples', link: 'seq_example/' },
 	{ text: 'Delay', link: 'delay/' },

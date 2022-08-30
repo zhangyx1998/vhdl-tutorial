@@ -1,4 +1,4 @@
 export default [
-	{ text: 'Introduction', link: 'readme' },
+	{ text: 'Introduction', link: 'README' },
 	{ text: 'Bit Diff Calculator', link: 'bit_diff/' },
 ]

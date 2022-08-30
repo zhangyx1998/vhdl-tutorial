@@ -8,7 +8,7 @@
 
 - Illustrates a hybrid Moore/Mealy implementation.
 
-- See the Mealy and Hybrid Mealy diagram in [schematic](../readme.html#schematic) for an illustration of the FSMs represented in code.
+- See the Mealy and Hybrid Mealy diagram in [schematic](../README.html#schematic) for an illustration of the FSMs represented in code.
 
 - NOTE: Provided testbench does not fully check for correctness.
 
