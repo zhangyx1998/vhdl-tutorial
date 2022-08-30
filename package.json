@@ -10,7 +10,8 @@
     "build": "vitepress build .",
     "serve": "vitepress serve .",
     "predeploy": "npm run build",
-    "deploy": "cd .vitepress/dist; git add -A; git commit -m 'deploy'; git push"
+    "deploy": "cd .vitepress/dist; git add -A; git commit -m 'deploy'; git push",
+    "postdeploy": "pwd; git add .vitepress/dist; git commit -m 'deploy'; git push"
   },
   "dependencies": {
     "@types/node": "^18.7.13",
