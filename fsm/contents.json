@@ -1,0 +1,14 @@
+[
+	{
+		"text": "Introduction",
+		"link": "README"
+	},
+	{
+		"text": "Moore",
+		"link": "moore"
+	},
+	{
+		"text": "Mealy",
+		"link": "mealy"
+	}
+]
