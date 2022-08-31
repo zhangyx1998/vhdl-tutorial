@@ -178,21 +178,21 @@ end case_statement_bad;
 -- The architecture commented out because 2008 generally has to be manually
 -- enabled in synthesis and simulation tools. Uncomment this to test it.
 
---architecture case_statement_2008 of priority_encoder_4in is
---begin
---    process(inputs)
---    begin
---        valid <= '1';
+architecture case_statement_2008 of priority_encoder_4in is
+begin
+   process(inputs)
+   begin
+       valid <= '1';
 
---        case? (inputs) is
---            when "1---" => result <= "11";
---            when "01--" => result <= "10";
---            when "001-" => result <= "01";
---            when "0001" => result <= "00";
---            when others => result <= "00"; valid <= '0';
---        end case?;
---    end process;
---end case_statement_2008;
+       case? (inputs) is
+           when "1---" => result <= "11";
+           when "01--" => result <= "10";
+           when "001-" => result <= "01";
+           when "0001" => result <= "00";
+           when others => result <= "00"; valid <= '0';
+       end case?;
+   end process;
+end case_statement_2008;
 
 
 architecture default_arch of priority_encoder_4in is

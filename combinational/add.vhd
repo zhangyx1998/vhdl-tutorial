@@ -211,10 +211,10 @@ end good5;
 -- example of inconsistent tool support making many of the VHDL 2008 much less
 -- useful.
 
---architecture good_2008 of add_ns is
---begin
---    (carry_out, sum) <= std_logic_vector(resize(unsigned(in0), WIDTH+1) + resize(unsigned(in1), WIDTH+1));
---end good_2008;
+architecture good_2008 of add_ns is
+begin
+   (carry_out, sum) <= std_logic_vector(resize(unsigned(in0), WIDTH+1) + resize(unsigned(in1), WIDTH+1));
+end good_2008;
 
 
 -------------------------------------------------------------------------

@@ -85,14 +85,14 @@ end arch2;
 -- VHDL 2008 introduced an else generate, which simplifies the previous
 -- architecture.
 
---architecture arch_2008 of mult1 is
---begin
---    U_MULT : if (IS_SIGNED) generate
---        product <= std_logic_vector(signed(in0) * signed(in1));
---    else generate
---        product <= std_logic_vector(unsigned(in0) * unsigned(in1));
---    end generate;
---end arch_2008;
+architecture arch_2008 of mult1 is
+begin
+   U_MULT : if (IS_SIGNED) generate
+       product <= std_logic_vector(signed(in0) * signed(in1));
+   else generate
+       product <= std_logic_vector(unsigned(in0) * unsigned(in1));
+   end generate;
+end arch_2008;
 
 
 -- Entity: mult_high_low
@@ -161,17 +161,17 @@ end arch2;
 -- In VHDL 2008, we can assign vector as part of LHS aggregates, which avoids
 -- the need for an extra signal.
 
---architecture arch_2008 of mult_high_low is
---begin
---    process(in0, in1)
---    begin
---        if (IS_SIGNED) then
---            (high, low) <= std_logic_vector(signed(in0) * signed(in1));
---        else
---            (high, low) <= std_logic_vector(unsigned(in0) * unsigned(in1));
---        end if;
---    end process;
---end arch_2008;
+architecture arch_2008 of mult_high_low is
+begin
+   process(in0, in1)
+   begin
+       if (IS_SIGNED) then
+           (high, low) <= std_logic_vector(signed(in0) * signed(in1));
+       else
+           (high, low) <= std_logic_vector(unsigned(in0) * unsigned(in1));
+       end if;
+   end process;
+end arch_2008;
 
 
 -- Entity: mult

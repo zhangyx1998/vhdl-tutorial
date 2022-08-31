@@ -311,45 +311,45 @@ end ARCH3_2;
 -- reading from an output, which is only possible in VHDL 2008. Uncomment
 -- if you tool supports VHDL 2008.
 
---architecture ARCH3_2008 of example is
+architecture ARCH3_2008 of example is
 
---    signal in1_r, in2_r : std_logic_vector(WIDTH-1 downto 0);
---    signal in3_r        : std_logic_vector(WIDTH-1 downto 0);
+   signal in1_r, in2_r : std_logic_vector(WIDTH-1 downto 0);
+   signal in3_r        : std_logic_vector(WIDTH-1 downto 0);
 
---    -- We no longer need add_out1_r in this version.
---    signal add_out2_r : std_logic_vector(WIDTH-1 downto 0);
+   -- We no longer need add_out1_r in this version.
+   signal add_out2_r : std_logic_vector(WIDTH-1 downto 0);
 
---begin
---    process(clk, rst)
---    begin
---        if (rst = '1') then
---            in1_r      <= (others => '0');
---            in2_r      <= (others => '0');
---            in3_r      <= (others => '0');   
---            add_out2_r <= (others => '0');
+begin
+   process(clk, rst)
+   begin
+       if (rst = '1') then
+           in1_r      <= (others => '0');
+           in2_r      <= (others => '0');
+           in3_r      <= (others => '0');   
+           add_out2_r <= (others => '0');
 
---        elsif(rising_edge(clk)) then
+       elsif(rising_edge(clk)) then
 
---            in1_r <= in1;
---            in2_r <= in2;
---            in3_r <= in3;
+           in1_r <= in1;
+           in2_r <= in2;
+           in3_r <= in3;
 
---            -- In this version, we assign out1, since it is registered.
---            out1 <= std_logic_vector(unsigned(in1_r) + unsigned(in2_r));
+           -- In this version, we assign out1, since it is registered.
+           out1 <= std_logic_vector(unsigned(in1_r) + unsigned(in2_r));
 
---            -- VHDL 2008 allows us to read from outputs, so this functionality
---            -- replaces the need for the previous add_out1_r.
---            --
---            -- For this example, I personally prefer the previous architecture.
---            -- In the previous version the exact registers are more obvious.
---            -- However, they both synthesize to the same circuit.
---            add_out2_r <= out1;
---        end if;
---    end process;
+           -- VHDL 2008 allows us to read from outputs, so this functionality
+           -- replaces the need for the previous add_out1_r.
+           --
+           -- For this example, I personally prefer the previous architecture.
+           -- In the previous version the exact registers are more obvious.
+           -- However, they both synthesize to the same circuit.
+           add_out2_r <= out1;
+       end if;
+   end process;
 
---    out2 <= std_logic_vector(unsigned(add_out2_r) + unsigned(in3_r));
+   out2 <= std_logic_vector(unsigned(add_out2_r) + unsigned(in3_r));
 
---end ARCH3_2008;
+end ARCH3_2008;
 
 
 architecture ARCH4 of example is
