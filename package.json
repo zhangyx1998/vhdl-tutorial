@@ -1,0 +1,23 @@
+{
+  "name": "vhdl-tutorial",
+  "type": "module",
+  "homepage": "https://vhdl.dev/",
+  "keywords": [
+    "digital-design",
+    "vhdl"
+  ],
+  "scripts": {
+    "dev": "vitepress dev .",
+    "build": "vitepress build .",
+    "serve": "vitepress serve .",
+    "deploy:init": "BRANCH=$(git branch --show-current); git checkout --orphan deploy; git commit --allow-empty -m \"initialize deploy branch\"; git push -u origin deploy; git checkout $BRANCH",
+    "predeploy": "rm -rf .vitepress/dist; git clone $(git remote get-url origin) -b deploy --depth 1 .vitepress/dist; npm run build;",
+    "deploy": "MSG=$(git log --oneline | head -n 1); cd .vitepress/dist; git add -A; git commit -m \"${MSG}\"; git push"
+  },
+  "dependencies": {
+    "@types/node": "^18.7.13",
+    "markdown-it": "^13.0.1",
+    "vitepress": "1.0.0-alpha.12",
+    "vue": "^3.2.37"
+  }
+}
