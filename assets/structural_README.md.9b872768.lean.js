@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as r,a}from"./app.5caad1d2.js";const g=JSON.parse('{"title":"Structural Logic","description":"","frontmatter":{},"headers":[],"relativePath":"structural/README.md"}'),i={name:"structural/README.md"},c=a("",6),s=[c];function n(o,h,d,l,u,p){return r(),t("div",null,s)}const m=e(i,[["render",n]]);export{g as __pageData,m as default};
